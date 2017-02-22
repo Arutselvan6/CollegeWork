@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">EventApp</string>
+    <string name="logo_desc">Univ Logo</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="login_topic">Login Page</string>
+    <string name="login_text">Enter the Code</string>
+    <string name="login_hint">Code..</string>
+    <string name="login_btn">Login</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="home_title">Welcome to Events App</string>
+    <string name="vced">View/Change Feedback Event Details</string>
+    <string name="ver">View Event Results</string>
+    <string name="title_activity_data_view">DataViewActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_change_data">ChangeDataActivity</string>
+    <string name="title_activity_result_view">ResultViewActivity</string>
+    
+    <string name="fdbk">Feedback Event Details</string>
+    <string name="evt_nm">Event Name :</string>
+    <string name="evt_dt">Event Date :</string>
+    <string name="evt_dpt">Event Dept :</string>
+    <string name="evt_vnu">Event Venue :</string>
+    <string name="evt_cd">Event Code :</string>
+    <string name="edt">Editing :</string>
+    <string name="evt_sbt">OK</string>
+
+</resources>
