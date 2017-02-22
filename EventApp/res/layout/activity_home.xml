@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/app_bkg"
     tools:context="${relativePackage}.${activityClass}" >
 
     <TextView
@@ -20,7 +21,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/ht"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="112dp"
+        android:background="@drawable/buttonstyle"
         android:onClick="viewData"
         android:text="@string/vced" />
 
@@ -28,8 +30,10 @@
         android:id="@+id/ced"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/ved"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/buttonstyle"
         android:onClick="viewResult"
         android:text="@string/ver" />
 

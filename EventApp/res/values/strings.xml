@@ -10,7 +10,7 @@
     <string name="login_btn">Login</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="home_title">Welcome to Events App</string>
-    <string name="vced">View/Change Feedback Event Details</string>
+    <string name="vced">View/Change Feedback Details</string>
     <string name="ver">View Event Results</string>
     <string name="title_activity_data_view">DataViewActivity</string>
     <string name="hello_world">Hello world!</string>
@@ -25,6 +25,6 @@
     <string name="evt_vnu">Event Venue :</string>
     <string name="evt_cd">Event Code :</string>
     <string name="edt">Editing :</string>
-    <string name="evt_sbt">OK</string>
+    <string name="evt_sbt">Done</string>
 
 </resources>

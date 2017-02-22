@@ -23,6 +23,8 @@ import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Switch;
 import android.widget.Toast;
 import cz.msebera.android.httpclient.Header;
@@ -31,6 +33,9 @@ public class DataViewActivity extends Activity {
 
 	EditText name,date,dept,venue,code;
 	Switch swt;
+	LinearLayout pb;
+	RelativeLayout rv;
+	
 	private boolean isNetworkAvailable() {
 	    ConnectivityManager connectivityManager 
 	          = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -52,7 +57,11 @@ public class DataViewActivity extends Activity {
 		venue= (EditText)findViewById(R.id.evenue);
 		code = (EditText)findViewById(R.id.ecode);
 		swt = (Switch)findViewById(R.id.switch1);
+		pb = (LinearLayout)findViewById(R.id.pb_view);
+		rv = (RelativeLayout)findViewById(R.id.nm_view);
 		if(!isNetworkAvailable()){			
+			pb.setVisibility(View.GONE);
+			rv.setVisibility(View.VISIBLE);
 	    	Toast.makeText(getBaseContext(), "Please Connect to the Internet and then Proceed", Toast.LENGTH_LONG).show();		
 	    	new CountDownTimer(500,500) {
 				
@@ -68,7 +77,8 @@ public class DataViewActivity extends Activity {
 		else{
 			AsyncHttpClient client = new AsyncHttpClient();
 			RequestParams params = new RequestParams();
-			
+			pb.setVisibility(View.VISIBLE);
+			rv.setVisibility(View.GONE);
 			// Make Http call to getusers.php
 	        client.post("http://www.scholarcouncil.com/www/mysqlsqlitesync/getformData.php",params,new JsonHttpResponseHandler(){
 	        	@Override
@@ -80,6 +90,8 @@ public class DataViewActivity extends Activity {
 	        			dept.setText(obj.getString("EventDept"));
 	        			venue.setText(obj.getString("Venue"));
 	        			code.setText(obj.getString("Code"));
+	        			pb.setVisibility(View.GONE);
+	        			rv.setVisibility(View.VISIBLE);
 	        		} catch (JSONException e) {
 	        			name.setText(" ");
 	        			date.setText(" ");
@@ -130,6 +142,7 @@ public class DataViewActivity extends Activity {
 			data.put("Venue", venue.getText().toString());
 			data.put("Code", code.getText().toString());
 			new FBDataUpdater().updateMysQL(data);
+			Toast.makeText(getApplicationContext(), "Form Data Updated", Toast.LENGTH_LONG).show();
 			Intent i = new Intent(DataViewActivity.this,HomeActivity.class);
 			startActivity(i);
 		}
