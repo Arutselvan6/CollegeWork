@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bkg"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <ScrollView 
+        android:layout_width="match_parent"
+    	android:layout_height="match_parent">
+	
+
+	    <RelativeLayout
+	        android:id="@+id/rl1"
+	        android:layout_width="match_parent"
+	        android:layout_height="400dp" >
+		
+	        <RelativeLayout
+	        	android:id="@+id/rl11"
+	        	android:layout_width="match_parent"
+	        	android:layout_height="400dp" >
+	        	
+	            <TextView
+				    android:id="@+id/textView1"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_alignParentTop="true"
+				    android:layout_centerHorizontal="true"
+				    android:layout_marginTop="50dp"
+				    android:text=" "
+				    android:textAppearance="?android:attr/textAppearanceMedium" />
+	        
+		        <Button
+		            android:id="@+id/lbtn"
+		            android:layout_width="100dp"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentBottom="true"
+		            android:layout_centerHorizontal="true"
+		            android:layout_marginBottom="34dp"
+		            android:onClick="login"
+		            android:textColor="#FFFFFF"
+		            android:background="@drawable/txtbk"
+		            android:text="@string/lg_btn" />
+		
+		        <EditText
+		            android:id="@+id/lcode"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerHorizontal="true"
+		            android:layout_centerVertical="true"
+		            android:ems="10"
+		            android:hint="@string/code_hint"
+		            android:inputType="textPassword" />
+		
+		        <EditText
+		            android:id="@+id/lemail"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_above="@+id/lcode"
+		            android:layout_centerHorizontal="true"
+		            android:layout_marginBottom="19dp"
+		            android:ems="10"
+		            android:hint="Enter your Email-ID"
+		            android:inputType="textEmailAddress" />
+			</RelativeLayout>
+
+			<RelativeLayout
+			    android:id="@+id/rl12"
+			    android:layout_width="match_parent"
+			    android:layout_height="400dp" >
+
+				<ProgressBar
+				    android:id="@+id/progressBar1"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_centerHorizontal="true"
+				    android:layout_centerVertical="true"
+				    android:contentDescription="Loading..." />
+			    
+			</RelativeLayout>
+	    </RelativeLayout>
+	</ScrollView>
+</RelativeLayout>

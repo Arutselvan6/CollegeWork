@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Events App</string>
+    <string name="ws">Welcome Screen</string>
+    <string name="event_title">
+<![CDATA[
+        <center><font color=#0000FF>
+        	<b>Welcome to Dr. M.G.R. University\'s
+        	<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        	<i>Events App</i></b></center>]]>
+    </string>
+    <string name="title_activity_fs">Event App</string>
+    <string name="evt_upd">Upcoming Events List</string>
+    <string name="fdb_app">Give Feedback</string>
+    <string name="title_activity_ues">Event App</string>
+    <string name="code_hint">Enter the Code...</string>
+    <string name="title_activity_ls">Event App</string>
+    <string name="lg_btn">Submit</string>
+    <string name="title_activity_f1">Event App</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_f2">Event App</string>
+    <string name="title_activity_f3">Event App</string>
+    <string name="title_activity_f4">Event App</string>
+
+</resources>
